@@ -45,17 +45,17 @@ body {
 
 .price {
   font-size: 22px;
-  float: left;
+  /* float: left; */
 }
 
 .description {
-  clear: both;
+  /* clear: both; */
   margin-bottom: 10px;
 }
 
 .shipping {
-  margin-top: 5px;
-  float: right;
+  /* margin-top: 5px; */
+  /* float: right; */
   text-transform: uppercase;
   font-size: 16px;
   color: #777;
@@ -118,12 +118,15 @@ p {
 }
 
 .boxes * {
-  display: inline-block;
   text-transform: uppercase;
   background-color: red;
-  width: 20px;
-  height: 20px;
-  margin: 5px;
+  width: 22px;
+  height: 22px;
+}
+
+.boxes {
+  display: flex;
+  gap: 10px;
 }
 
 .boxes div:nth-child(1) {
@@ -151,21 +154,71 @@ p {
   background-color: #7e2800;
 }
 
-/* (825-12-80-250)/2 */
+/* (825-12-80-250)/2  */
 .price-details {
-  float: left;
-  width: 241px;
-  margin-right: 40px;
-  margin-top: 20px;
+  /* width: 241px; */
+  /* margin-right: 40px; */
+  /* margin-top: 20px; */
 }
 
 .product-details {
-  float: left;
-  width: 241px;
+  /* width: 241px; */
   padding-top: 20px;
 }
 
 .product-img {
-  float: left;
-  margin-right: 40px;
+  /* margin-right: 40px; */
+}
+
+/* FLEXBOX 
+.row {
+  display: flex;
+  gap: 40px;
+  /* align-items: center; 
+}
+
+.product-img {
+  margin: 0 0 0;
+}
+
+.price-details {
+  flex: 1;
+}
+
+.product-details {
+  flex: 1;
+}
+
+.price-shipping {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* margin-bottom: 20px; 
+}
+*/
+
+/* CSS Grid */
+.product {
+  display: grid;
+  grid-template-columns: 250px 1fr 1fr;
+  column-gap: 40px;
+  align-items: center;
+  /* row-gap: 20px; */
+}
+
+.product-title {
+  grid-column: 1/-1;
+}
+
+.price-details {
+  /* grid-column: 2/3; */
+}
+
+.product-details {
+  align-self: flex-start;
+  /* grid-column: 3/4; */
+}
+
+button {
+  grid-column: 1 / span 3;
 }
